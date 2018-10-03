@@ -176,21 +176,104 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
-<p>This is an <a href="http://rmarkdown.rstudio.com">R Markdown</a> Notebook. When you execute code within the notebook, the results appear beneath the code.</p>
-<p>Try executing this chunk by clicking the <em>Run</em> button within the chunk or by placing your cursor inside it and pressing <em>Ctrl+Shift+Enter</em>.</p>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
-<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChjYXJzKVxuYGBgIn0= -->
-<pre class="r"><code>plot(cars)</code></pre>
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuYSA8LSBzZXEoeW1kKFwiMjAwMS0wMS0wMVwiKSx5bWQoXCIyMDE4LTA5LTAxXCIpLGJ5PVwibW9udGhcIilcbmBgYCJ9 -->
+<pre class="r"><code>a &lt;- seq(ymd(&quot;2001-01-01&quot;),ymd(&quot;2018-09-01&quot;),by=&quot;month&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4geW1kKFwiMjAwMS0wMS0wMVwiKSA6IGNvdWxkIG5vdCBmaW5kIGZ1bmN0aW9uIFwieW1kXCJcbiJ9 -->
+<pre><code>Error in ymd(&quot;2001-01-01&quot;) : could not find function &quot;ymd&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShkcGx5cilcbmxpYnJhcnkobHVicmlkYXRlKVxuYSA8LSB5bWQoXCIyMDE3LTAxLTMxXCIpIFxuYiA8LSB5bWRfaG1zKFwiMjAxNy0wMS0zMSAyMDoxMTo1OVwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(dplyr)
+library(lubridate)
+a &lt;- ymd(&quot;2017-01-31&quot;) 
+b &lt;- ymd_hms(&quot;2017-01-31 20:11:59&quot;)</code></pre>
 <!-- rnb-source-end -->
 <!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2MobGV0dGVycyxMRVRURVJTKVxuYGBgIn0= -->
+<pre class="r"><code>str_c(letters,LETTERS)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImFBXCIgXCJiQlwiIFwiY0NcIiBcImREXCIgXCJlRVwiIFwiZkZcIiBcImdHXCJcbiBbOF0gXCJoSFwiIFwiaUlcIiBcImpKXCIgXCJrS1wiIFwibExcIiBcIm1NXCIgXCJuTlwiXG5bMTVdIFwib09cIiBcInBQXCIgXCJxUVwiIFwiclJcIiBcInNTXCIgXCJ0VFwiIFwidVVcIlxuWzIyXSBcInZWXCIgXCJ3V1wiIFwieFhcIiBcInlZXCIgXCJ6WlwiXG4ifQ== -->
+<pre><code> [1] &quot;aA&quot; &quot;bB&quot; &quot;cC&quot; &quot;dD&quot; &quot;eE&quot; &quot;fF&quot; &quot;gG&quot;
+ [8] &quot;hH&quot; &quot;iI&quot; &quot;jJ&quot; &quot;kK&quot; &quot;lL&quot; &quot;mM&quot; &quot;nN&quot;
+[15] &quot;oO&quot; &quot;pP&quot; &quot;qQ&quot; &quot;rR&quot; &quot;sS&quot; &quot;tT&quot; &quot;uU&quot;
+[22] &quot;vV&quot; &quot;wW&quot; &quot;xX&quot; &quot;yY&quot; &quot;zZ&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2MobGV0dGVycyxMRVRURVJTLHNlcD1cIi1cIilcbmBgYCJ9 -->
+<pre class="r"><code>str_c(letters,LETTERS,sep=&quot;-&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImEtQVwiIFwiYi1CXCIgXCJjLUNcIiBcImQtRFwiIFwiZS1FXCIgXCJmLUZcIlxuIFs3XSBcImctR1wiIFwiaC1IXCIgXCJpLUlcIiBcImotSlwiIFwiay1LXCIgXCJsLUxcIlxuWzEzXSBcIm0tTVwiIFwibi1OXCIgXCJvLU9cIiBcInAtUFwiIFwicS1RXCIgXCJyLVJcIlxuWzE5XSBcInMtU1wiIFwidC1UXCIgXCJ1LVVcIiBcInYtVlwiIFwidy1XXCIgXCJ4LVhcIlxuWzI1XSBcInktWVwiIFwiei1aXCJcbiJ9 -->
+<pre><code> [1] &quot;a-A&quot; &quot;b-B&quot; &quot;c-C&quot; &quot;d-D&quot; &quot;e-E&quot; &quot;f-F&quot;
+ [7] &quot;g-G&quot; &quot;h-H&quot; &quot;i-I&quot; &quot;j-J&quot; &quot;k-K&quot; &quot;l-L&quot;
+[13] &quot;m-M&quot; &quot;n-N&quot; &quot;o-O&quot; &quot;p-P&quot; &quot;q-Q&quot; &quot;r-R&quot;
+[19] &quot;s-S&quot; &quot;t-T&quot; &quot;u-U&quot; &quot;v-V&quot; &quot;w-W&quot; &quot;x-X&quot;
+[25] &quot;y-Y&quot; &quot;z-Z&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3RyX2MoXCJsb3dlcmNhc2U6IFwiLCBsZXR0ZXJzLCBcIiwgY2FwaXRhbDogXCIsIExFVFRFUlMpXG5gYGAifQ== -->
+<pre class="r"><code>str_c(&quot;lowercase: &quot;, letters, &quot;, capital: &quot;, LETTERS)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiIFsxXSBcImxvd2VyY2FzZTogYSwgY2FwaXRhbDogQVwiXG4gWzJdIFwibG93ZXJjYXNlOiBiLCBjYXBpdGFsOiBCXCJcbiBbM10gXCJsb3dlcmNhc2U6IGMsIGNhcGl0YWw6IENcIlxuIFs0XSBcImxvd2VyY2FzZTogZCwgY2FwaXRhbDogRFwiXG4gWzVdIFwibG93ZXJjYXNlOiBlLCBjYXBpdGFsOiBFXCJcbiBbNl0gXCJsb3dlcmNhc2U6IGYsIGNhcGl0YWw6IEZcIlxuIFs3XSBcImxvd2VyY2FzZTogZywgY2FwaXRhbDogR1wiXG4gWzhdIFwibG93ZXJjYXNlOiBoLCBjYXBpdGFsOiBIXCJcbiBbOV0gXCJsb3dlcmNhc2U6IGksIGNhcGl0YWw6IElcIlxuWzEwXSBcImxvd2VyY2FzZTogaiwgY2FwaXRhbDogSlwiXG5bMTFdIFwibG93ZXJjYXNlOiBrLCBjYXBpdGFsOiBLXCJcblsxMl0gXCJsb3dlcmNhc2U6IGwsIGNhcGl0YWw6IExcIlxuWzEzXSBcImxvd2VyY2FzZTogbSwgY2FwaXRhbDogTVwiXG5bMTRdIFwibG93ZXJjYXNlOiBuLCBjYXBpdGFsOiBOXCJcblsxNV0gXCJsb3dlcmNhc2U6IG8sIGNhcGl0YWw6IE9cIlxuWzE2XSBcImxvd2VyY2FzZTogcCwgY2FwaXRhbDogUFwiXG5bMTddIFwibG93ZXJjYXNlOiBxLCBjYXBpdGFsOiBRXCJcblsxOF0gXCJsb3dlcmNhc2U6IHIsIGNhcGl0YWw6IFJcIlxuWzE5XSBcImxvd2VyY2FzZTogcywgY2FwaXRhbDogU1wiXG5bMjBdIFwibG93ZXJjYXNlOiB0LCBjYXBpdGFsOiBUXCJcblsyMV0gXCJsb3dlcmNhc2U6IHUsIGNhcGl0YWw6IFVcIlxuWzIyXSBcImxvd2VyY2FzZTogdiwgY2FwaXRhbDogVlwiXG5bMjNdIFwibG93ZXJjYXNlOiB3LCBjYXBpdGFsOiBXXCJcblsyNF0gXCJsb3dlcmNhc2U6IHgsIGNhcGl0YWw6IFhcIlxuWzI1XSBcImxvd2VyY2FzZTogeSwgY2FwaXRhbDogWVwiXG5bMjZdIFwibG93ZXJjYXNlOiB6LCBjYXBpdGFsOiBaXCJcbiJ9 -->
+<pre><code> [1] &quot;lowercase: a, capital: A&quot;
+ [2] &quot;lowercase: b, capital: B&quot;
+ [3] &quot;lowercase: c, capital: C&quot;
+ [4] &quot;lowercase: d, capital: D&quot;
+ [5] &quot;lowercase: e, capital: E&quot;
+ [6] &quot;lowercase: f, capital: F&quot;
+ [7] &quot;lowercase: g, capital: G&quot;
+ [8] &quot;lowercase: h, capital: H&quot;
+ [9] &quot;lowercase: i, capital: I&quot;
+[10] &quot;lowercase: j, capital: J&quot;
+[11] &quot;lowercase: k, capital: K&quot;
+[12] &quot;lowercase: l, capital: L&quot;
+[13] &quot;lowercase: m, capital: M&quot;
+[14] &quot;lowercase: n, capital: N&quot;
+[15] &quot;lowercase: o, capital: O&quot;
+[16] &quot;lowercase: p, capital: P&quot;
+[17] &quot;lowercase: q, capital: Q&quot;
+[18] &quot;lowercase: r, capital: R&quot;
+[19] &quot;lowercase: s, capital: S&quot;
+[20] &quot;lowercase: t, capital: T&quot;
+[21] &quot;lowercase: u, capital: U&quot;
+[22] &quot;lowercase: v, capital: V&quot;
+[23] &quot;lowercase: w, capital: W&quot;
+[24] &quot;lowercase: x, capital: X&quot;
+[25] &quot;lowercase: y, capital: Y&quot;
+[26] &quot;lowercase: z, capital: Z&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuc3R1ZGVudElEIDwtIHJlYWRfY3N2KFwiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9tYXN0ZXIvc3R1ZGVudElELmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>studentID &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/studentID.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiRXJyb3IgaW4gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2dpdGh1Yi1kYXRhL21hc3Rlci9zdHVkZW50SUQuY3N2XCIpIDogXG4gIGNvdWxkIG5vdCBmaW5kIGZ1bmN0aW9uIFwicmVhZF9jc3ZcIlxuIn0= -->
+<pre><code>Error in read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/studentID.csv&quot;) : 
+  could not find function &quot;read_csv&quot;</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShyZWFkcilcbmdpdGh1YkRhdGEgPC0gcmVhZF9jc3YoXCJodHRwczovL3Jhdy5naXRodWJ1c2VyY29udGVudC5jb20vdHBlbWFydGluL2dpdGh1Yi1kYXRhL21hc3Rlci9naXRodWJEYXRhLmNzdlwiKVxuYGBgIn0= -->
+<pre class="r"><code>library(readr)
+githubData &lt;- read_csv(&quot;https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv&quot;)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-output-begin eyJkYXRhIjoiYGN1cmxgIHBhY2thZ2Ugbm90IGluc3RhbGxlZCwgZmFsbGluZyBiYWNrIHRvIHVzaW5nIGB1cmwoKWBcbk1pc3NpbmcgY29sdW1uIG5hbWVzIGZpbGxlZCBpbjogJ1gxJyBbMV1QYXJzZWQgd2l0aCBjb2x1bW4gc3BlY2lmaWNhdGlvbjpcbmNvbHMoXG4gIFgxID0gY29sX2ludGVnZXIoKSxcbiAgVGltZXN0YW1wID0gY29sX2NoYXJhY3RlcigpLFxuICBgR2l0SHViIHVzZXJuYW1lYCA9IGNvbF9jaGFyYWN0ZXIoKSxcbiAgYEdpdEh1YiByZXBvIG5hbWVgID0gY29sX2NoYXJhY3RlcigpXG4pXG4ifQ== -->
+<pre><code>`curl` package not installed, falling back to using `url()`
+Missing column names filled in: 'X1' [1]Parsed with column specification:
+cols(
+  X1 = col_integer(),
+  Timestamp = col_character(),
+  `GitHub username` = col_character(),
+  `GitHub repo name` = col_character()
+)</code></pre>
+<!-- rnb-output-end -->
+<!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>Add a new chunk by clicking the <em>Insert Chunk</em> button on the toolbar or by pressing <em>Ctrl+Alt+I</em>.</p>
-<p>When you save the notebook, an HTML file containing the code and output will be saved alongside it (click the <em>Preview</em> button or press <em>Ctrl+Shift+K</em> to preview the HTML file).</p>
-<p>The preview shows you a rendered HTML copy of the contents of the editor. Consequently, unlike <em>Knit</em>, <em>Preview</em> does not run any R code chunks. Instead, the output of the chunk when it was last run in the editor is displayed.</p>
 <!-- rnb-text-end -->
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgtMTAtMDMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpUaGlzIGlzIGFuIFtSIE1hcmtkb3duXShodHRwOi8vcm1hcmtkb3duLnJzdHVkaW8uY29tKSBOb3RlYm9vay4gV2hlbiB5b3UgZXhlY3V0ZSBjb2RlIHdpdGhpbiB0aGUgbm90ZWJvb2ssIHRoZSByZXN1bHRzIGFwcGVhciBiZW5lYXRoIHRoZSBjb2RlLiANCg0KVHJ5IGV4ZWN1dGluZyB0aGlzIGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqUnVuKiBidXR0b24gd2l0aGluIHRoZSBjaHVuayBvciBieSBwbGFjaW5nIHlvdXIgY3Vyc29yIGluc2lkZSBpdCBhbmQgcHJlc3NpbmcgKkN0cmwrU2hpZnQrRW50ZXIqLiANCg0KYGBge3J9DQpwbG90KGNhcnMpDQpgYGANCg0KQWRkIGEgbmV3IGNodW5rIGJ5IGNsaWNraW5nIHRoZSAqSW5zZXJ0IENodW5rKiBidXR0b24gb24gdGhlIHRvb2xiYXIgb3IgYnkgcHJlc3NpbmcgKkN0cmwrQWx0K0kqLg0KDQpXaGVuIHlvdSBzYXZlIHRoZSBub3RlYm9vaywgYW4gSFRNTCBmaWxlIGNvbnRhaW5pbmcgdGhlIGNvZGUgYW5kIG91dHB1dCB3aWxsIGJlIHNhdmVkIGFsb25nc2lkZSBpdCAoY2xpY2sgdGhlICpQcmV2aWV3KiBidXR0b24gb3IgcHJlc3MgKkN0cmwrU2hpZnQrSyogdG8gcHJldmlldyB0aGUgSFRNTCBmaWxlKS4NCg0KVGhlIHByZXZpZXcgc2hvd3MgeW91IGEgcmVuZGVyZWQgSFRNTCBjb3B5IG9mIHRoZSBjb250ZW50cyBvZiB0aGUgZWRpdG9yLiBDb25zZXF1ZW50bHksIHVubGlrZSAqS25pdCosICpQcmV2aWV3KiBkb2VzIG5vdCBydW4gYW55IFIgY29kZSBjaHVua3MuIEluc3RlYWQsIHRoZSBvdXRwdXQgb2YgdGhlIGNodW5rIHdoZW4gaXQgd2FzIGxhc3QgcnVuIGluIHRoZSBlZGl0b3IgaXMgZGlzcGxheWVkLg0K</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogIjIwMTgtMTAtMDMiDQpvdXRwdXQ6IGh0bWxfbm90ZWJvb2sNCi0tLQ0KDQpgYGB7cn0NCmEgPC0gc2VxKHltZCgiMjAwMS0wMS0wMSIpLHltZCgiMjAxOC0wOS0wMSIpLGJ5PSJtb250aCIpDQpiIDwtIHNlcSh5bWQoIjIwMDEtMDEtMDEiKSx5bWQoIjIwMTgtMDktMDEiKSxieT0icXVhcnRlciIpDQpjIDwtIHNlcSh5bWQoIjIwMDEtMDEtMDEiKSx5bWQoIjIwMTgtMDktMDEiKSxieT0ieWVhciIpDQpgYGANCmBgYHtyfQ0KbGlicmFyeShkcGx5cikNCmxpYnJhcnkobHVicmlkYXRlKQ0KYSA8LSB5bWQoIjIwMTctMDEtMzEiKSANCmIgPC0geW1kX2htcygiMjAxNy0wMS0zMSAyMDoxMTo1OSIpDQpgYGANCmBgYHtyfQ0Kc3RyX2MobGV0dGVycyxMRVRURVJTKQ0Kc3RyX2MobGV0dGVycyxMRVRURVJTLHNlcD0iLSIpDQpzdHJfYygibG93ZXJjYXNlOiAiLCBsZXR0ZXJzLCAiLCBjYXBpdGFsOiAiLCBMRVRURVJTKQ0KYGBgDQpgYGB7cn0NCnN0dWRlbnRJRCA8LSByZWFkX2NzdigiaHR0cHM6Ly9yYXcuZ2l0aHVidXNlcmNvbnRlbnQuY29tL3RwZW1hcnRpbi9naXRodWItZGF0YS9tYXN0ZXIvc3R1ZGVudElELmNzdiIpDQpgYGANCmBgYHtyfQ0KbGlicmFyeShyZWFkcikNCmdpdGh1YkRhdGEgPC0gcmVhZF9jc3YoImh0dHBzOi8vcmF3LmdpdGh1YnVzZXJjb250ZW50LmNvbS90cGVtYXJ0aW4vZ2l0aHViLWRhdGEvbWFzdGVyL2dpdGh1YkRhdGEuY3N2IikNCmBgYA0KDQo=</div>
 
 
 

@@ -14,4 +14,27 @@ library(lubridate)
 a <- ymd("2017-01-31") 
 b <- ymd_hms("2017-01-31 20:11:59")
 ```
+```{r}
+str_c(letters,LETTERS)
+str_c(letters,LETTERS,sep="-")
+str_c("lowercase: ", letters, ", capital: ", LETTERS)
+```
+```{r}
+studentID <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/studentID.csv")
+```
+```{r}
+library(readr)
+githubData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv")
+```
+```{r}
+fruits <- c(
+  "apples and oranges and pears and bananas",
+  "pineapples and mangos and guavas"
+)
+str_split_fixed(fruits, " and ", 3)
+str_split_fixed(fruits, " and ", 4)
+
+```
+```{r}
+
 

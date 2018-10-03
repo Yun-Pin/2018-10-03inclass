@@ -1,0 +1,8 @@
+"0","fruits <- c("
+"0","  ""apples and oranges and pears and bananas"","
+"0","  ""pineapples and mangos and guavas"""
+"0",")"
+"0","str_split_fixed(fruits, "" and "", 3)"
+"2","Error in str_split_fixed(fruits, "" and "", 3) : 
+  could not find function ""str_split_fixed""
+"
