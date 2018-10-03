@@ -26,15 +26,4 @@ studentID <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/m
 library(readr)
 githubData <- read_csv("https://raw.githubusercontent.com/tpemartin/github-data/master/githubData.csv")
 ```
-```{r}
-fruits <- c(
-  "apples and oranges and pears and bananas",
-  "pineapples and mangos and guavas"
-)
-str_split_fixed(fruits, " and ", 3)
-str_split_fixed(fruits, " and ", 4)
-
-```
-```{r}
-
 
