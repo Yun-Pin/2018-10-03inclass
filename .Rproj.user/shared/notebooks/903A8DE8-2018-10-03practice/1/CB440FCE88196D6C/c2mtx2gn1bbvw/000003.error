@@ -1,0 +1,1 @@
+{"frames":[{"character_number":0,"end_character_number":0,"end_line_number":0,"file":"","func":"seq(ymd(\"2001-01-01\"), ymd(\"2018-09-01\"), by = \"month\")","line_number":0}],"message":"Error in ymd(\"2001-01-01\") : could not find function \"ymd\"\n"}
